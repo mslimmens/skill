@@ -1,0 +1,29 @@
+Python 3.13.1
+
+# Para procesar el audio del video
+brew install ffmpeg
+
+# Para que Whisper pueda compilar sus dependencias en Python 3.13
+brew install cmake
+
+------
+
+# 1. Crear el entorno virtual llamado 'venv_produccion'
+python3.12 -m venv venv_produccion
+
+# 2. Activarlo
+source venv_produccion/bin/activate
+
+------
+pip install --upgrade pip setuptools wheel
+
+------
+
+# Instalar MoviePy (Versión 2.0+ que es la que soporta tu import)
+pip install moviepy
+
+# Instalar Whisper y sus dependencias de cálculo
+pip install openai-whisper
+
+
+
