@@ -1,3 +1,5 @@
+mv /Users/matydev/Downloads/clase.mp4 /Users/matydev/Documents/GitHub/skill/transcripcion/
+
 Python 3.13.1
 
 # Para procesar el audio del video
