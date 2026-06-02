@@ -1,27 +1,41 @@
-import ffmpeg
+## reduce video, al maximo manteniendo calidad, solicita path y comprime con ffmpeg a ese peso aproximado.
 
-def comprimir_video(video_origen, video_destino, calidad=26):
-    """
-    Reduce el tamaño de un video usando el códec H.265.
-    calidad (CRF): A menor número, mejor calidad pero más pesado. 
-                   El rango ideal es entre 22 y 28.
-    """
+import subprocess
+import os
+
+def comprimir_video():
+    # 1. Pedir la ruta del video al usuario
+    ruta_input = input("Ingresa la ruta completa del video (ej. /home/matias/video.mp4): ").strip().replace("'", "")
+    
+    if not os.path.exists(ruta_input):
+        print("Error: El archivo no existe. Por favor, verifica la ruta.")
+        return
+
+    # 2. Generar el nombre de salida en la misma carpeta
+    directorio = os.path.dirname(ruta_input)
+    nombre_base = os.path.basename(ruta_input)
+    nombre_sin_ext, ext = os.path.splitext(nombre_base)
+    
+    ruta_output = os.path.join(directorio, f"{nombre_sin_ext}_comprimido{ext}")
+
+    # 3. Comprimir
     try:
-        print("Comprimiendo... Esto puede tardar unos segundos.")
+        print(f"Comprimiendo: {nombre_base}...")
+        print(f"Guardando en: {ruta_output}")
         
-        (
-            ffmpeg
-            .input(video_origen)
-            .output(video_destino, vcodec='libx265', crf=calidad, acodec='aac')
-            .run(overwrite_output=True)
-        )
+        comando = [
+            'ffmpeg', '-i', ruta_input, 
+            '-vcodec', 'libx265', 
+            '-crf', '24', 
+            '-acodec', 'aac', 
+            '-y', ruta_output
+        ]
         
-        print(True, f"¡Video comprimido con éxito guardado en: {video_destino}!")
-    except ffmpeg.Error as e:
-        print(f"Hubo un error al procesar el video: {e.stderr.decode()}")
+        subprocess.run(comando, check=True)
+        print("¡Proceso completado con éxito!")
+        
+    except subprocess.CalledProcessError as e:
+        print(f"Hubo un error al procesar el video: {e}")
 
-# Ejemplo de uso
-video_input = "test.mp4"
-video_output = "mi_video_comprimido.mp4"
-
-comprimir_video(video_input, video_output, calidad=24)
+if __name__ == "__main__":
+    comprimir_video()
