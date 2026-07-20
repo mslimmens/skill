@@ -1,0 +1,26 @@
+file '/home/matias/Escritorio/esai/Meditación 22-07/1.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/10.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/11.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/12.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/13.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/2.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/3.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/4.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/5.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/6.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/7.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/8.png'
+duration 3.0
+file '/home/matias/Escritorio/esai/Meditación 22-07/9.png'
+duration 3.0
