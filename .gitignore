@@ -46,3 +46,34 @@ Thumbs.db
 # --- Logs y Bases de datos locales (opcional pero recomendado) ---
 *.log
 *.sqlite3
+
+# --- Archivos multimedia (Videos e Imágenes) ---
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.bmp
+
+# --- Archivos de audio y música ---
+*.mp3
+*.wav
+*.flac
+*.aac
+*.ogg
+*.m4a
+*.wma
+
+# --- Archivo de transcripción específico ---
+transcripcion/transcripcion_final.txt
+
+# --- Archivos CSV / Tabulares ---
+*.csv
